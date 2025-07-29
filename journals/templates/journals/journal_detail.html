@@ -1,0 +1,9 @@
+{% block content %}
+<p>Title: {{ journal.title }}</p>
+<p>prompt: {{ journal.daily_prompt }}</p>
+<p>Date Created: {{ journal.date_created }}</p>
+<p>Date Updated: {{ journal.date_updated }}</p>
+<p>User: {{ journal.user }}</p>
+<p>Completed: {{ journal.is_done }}</p>
+
+{% endblock content %}

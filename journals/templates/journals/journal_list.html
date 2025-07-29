@@ -1,0 +1,11 @@
+{% block content %}
+
+{% for journal in journals %}
+<li><a href="{%url 'journal-detail' journal.id %}">{{ journal.title|lower }}</a></li>
+{% empty %}
+<p>No journals added yet.</p>
+{% endfor %}
+
+
+
+{% endblock content %}

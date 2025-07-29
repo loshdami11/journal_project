@@ -1,0 +1,18 @@
+{% block content %}
+
+<form method='post'>
+{% csrf_token %}
+<p>Title: {{ todo.title }}</p>
+<p>Prompt: {{ journal.daily_prompt}}</p>
+<p>Gratitude: {{ journal.gratitude_section}}</p>
+<p>Goals: {{journal.goals}}</p>
+<p>Date Created: {{ journal.date_created }}</p>
+<p>Date Updated: {{ journal.date_updated }}</p>
+<p>User: {{ journal.user }}</p>
+<p>Completed: {{ journal.is_done }}</p>
+<br>
+<button type='delete'>Do you want to delete this journal?</button>
+<p><a href="{% url 'home' %}">&raquo; Go back to home page</a></p>
+</form>
+
+{% endblock content %}
