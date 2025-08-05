@@ -17,3 +17,11 @@ class Journal(models.Model):
     def __str__(self):
         """Return a string representation of the model."""
         return f'{self.title.lower()}'
+
+
+    class Meta:
+	    ordering = ['-date_created']
+
+    
+    
+
